@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #090012;
+  --foreground: hsl(271, 62%, 16%);
+  --y1: #E19D00;
+  --y2: #FFDB86;
+  --y3: #A27200;
+  --y4: #AA7700;
+  --y5: #E19D00;
+  --y6: #0D0013;
+  --textmain: linear-gradient(
+    to right,
+    var(--y1) 0%,
+    var(--y2) 27%,
+    var(--y3) 59%,
+    var(--y4) 84%,
+    var(--y5) 92%
+  );
+  --navbar: linear-gradient(
+    to bottom,
+    var(--y1) 0%,
+    var(--y2) 20%,
+    var(--y3) 40%,
+    var(--y4) 60%,
+    var(--y5) 90%,
+    var(--y6) 100%
+  );
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-y1: var(--y1);
+  --color-y2: var(--y2);
+  --color-y3: var(--y3);
+  --color-y4: var(--y4);
+  --color-y5: var(--y5);
+  --color-navbar: var(--navbar);
+}
+
+.bg-gradient {
+  background: var(--textmain);
+}
+
+.nav-gradient {
+  background: var(--navbar);
+}
+
+.text-gradient {
+  background: var(--textmain);
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #090012;
+    --foreground: #290f41;
+  }
+}
+
+
