@@ -1,15 +1,9 @@
 "use client";
 
-import Link from "next/Link"
 import { useRouter } from 'next/navigation';
 
 export default function committee(){
   const router = useRouter();
-
-  const handleClick = () => {
-    router.push('/un');
-  };
-
   return (
     <div id="committee" className="bg-radial from-foreground to-background pb-30">
         <h1 className="text-7xl text-gradient text-center mt-40 font-serif">COMMITTEE LIST</h1>
