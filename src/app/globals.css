@@ -53,6 +53,7 @@
   background: var(--textmain);
   background-clip: text;
   color: transparent;
+  line-height: normal;
 }
 
 @media (prefers-color-scheme: dark) {
