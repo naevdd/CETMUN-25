@@ -1,11 +1,12 @@
-"use client";
-import React, { useEffect, useState, useRef } from "react";
+'use client';
+
+import React, { useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// 1. Define the type for the countdown state
+// Countdown state type
 type TimeLeft = {
   days: string;
   hours: string;
@@ -14,21 +15,20 @@ type TimeLeft = {
 };
 
 export default function Countdown() {
-
-  const headingRef = useRef(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
-  // 2. Utility to format numbers as 2-digit strings
+  // Format numbers to 2-digit strings
   const formatNumber = (num: number): string => (num < 10 ? `0${num}` : `${num}`);
 
-  // 3. Function to calculate time remaining
+  // Calculate time left
   const calculateTimeLeft = (): TimeLeft => {
     const targetDate = new Date(`August 1, ${new Date().getFullYear()} 00:00:00`);
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
 
     if (difference <= 0) {
-      return { days: "00", hours: "00", minutes: "00", seconds: "00" };
+      return { days: '00', hours: '00', minutes: '00', seconds: '00' };
     }
 
     return {
@@ -39,23 +39,22 @@ export default function Countdown() {
     };
   };
 
-  // 5. Set up timer only on client side
   useEffect(() => {
-    setTimeLeft(calculateTimeLeft()); // set immediately on mount
+    setTimeLeft(calculateTimeLeft());
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer); // clean up
+    return () => clearInterval(timer);
   }, []);
-
 
   useEffect(() => {
     if (!headingRef.current) return;
-    
+
     const text = 'CONFERENCE STARTS IN :';
     const letters = text.split('');
+
     headingRef.current.innerHTML = letters
       .map(
         (char) =>
@@ -65,7 +64,6 @@ export default function Countdown() {
 
     const spans = headingRef.current.querySelectorAll('span');
 
-    // Typing animation on scroll
     gsap.fromTo(
       spans,
       { opacity: 0 },
@@ -92,11 +90,12 @@ export default function Countdown() {
     );
   }
 
-  // 7. Render the countdown
   return (
     <div id="countdown" className="h-screen bg-radial from-foreground to-background">
-      <h1 ref={headingRef} className="text-6xl text-gradient text-center mt-40 font-serif">
-      </h1>
+      <h1
+        ref={headingRef}
+        className="text-6xl text-gradient text-center mt-40 font-serif"
+      />
       <div className="bg-gradient rounded-3xl w-3/5 h-2/7 mx-auto mt-40">
         <div className="flex font-serif flex-row justify-center pt-10 lg:space-x-9 space-x-2 lg:mb-4 text-4xl lg:text-[130px]">
           <div className="text-center w-[130px]">
@@ -118,5 +117,4 @@ export default function Countdown() {
       </div>
     </div>
   );
-};
-
+}
