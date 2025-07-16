@@ -7,56 +7,58 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-  const headingRef = useRef(0);
-  const paraRef = useRef(0);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const paraRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-
     const text = 'WHAT IS CET MUN?';
     const letters = text.split('');
-    headingRef.current.innerHTML = letters
-      .map(
-        (char) =>
-          `<span class="inline-block opacity-0">${char === ' ' ? '&nbsp;' : char}</span>`
-      )
-      .join('');
 
-    const spans = headingRef.current.querySelectorAll('span');
+    if (headingRef.current) {
+      headingRef.current.innerHTML = letters
+        .map(
+          (char) =>
+            `<span class="inline-block opacity-0">${char === ' ' ? '&nbsp;' : char}</span>`
+        )
+        .join('');
 
-    // Typing animation on scroll
-    gsap.fromTo(
-      spans,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        stagger: 0.05,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: headingRef.current,
-          start: 'top 80%',
-          end: 'top 30%',
-          scrub: true,
-          toggleActions: 'play reverse play reverse',
-        },
-      }
-    );
+      const spans = headingRef.current.querySelectorAll('span');
 
-    // Paragraph fade in/out
-    gsap.fromTo(
-      paraRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: paraRef.current,
-          start: 'top 85%',
-          end: 'top 40%',
-          scrub: true,
-          toggleActions: 'play reverse play reverse',
-        },
-      }
-    );
+      gsap.fromTo(
+        spans,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          stagger: 0.05,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: headingRef.current,
+            start: 'top 80%',
+            end: 'top 30%',
+            scrub: true,
+            toggleActions: 'play reverse play reverse',
+          },
+        }
+      );
+    }
+
+    if (paraRef.current) {
+      gsap.fromTo(
+        paraRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: paraRef.current,
+            start: 'top 85%',
+            end: 'top 40%',
+            scrub: true,
+            toggleActions: 'play reverse play reverse',
+          },
+        }
+      );
+    }
   }, []);
 
   return (
@@ -67,7 +69,10 @@ export default function About() {
       <h1
         ref={headingRef}
         className="text-center pt-40 text-6xl md:text-8xl font-serif font-semibold text-gradient"
-      />
+      >
+        WHAT IS CET MUN?
+      </h1>
+
       <p
         ref={paraRef}
         className="text-center mt-20 px-10 md:px-60 text-lg md:text-2xl text-white font-serif"
