@@ -9,6 +9,8 @@
   --y4: #AA7700;
   --y5: #E19D00;
   --y6: #0D0013;
+  --n1: #290F41;
+  --n2: #090012;
   --textmain: linear-gradient(
     to right,
     var(--y1) 0%,
@@ -28,11 +30,27 @@
   );
 }
 
+@font-face {
+    font-family: 'Seasons';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-theseasons-reg.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Seasonsb';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-theseasons-bd.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-n2: var(--n2);
+  --color-n1: var(--n1);
+  --font-seasons_r: Seasons, "sans-serif";
+  --font-seasons_b: Seasonsb, "sans-serif";
   --color-y1: var(--y1);
   --color-y2: var(--y2);
   --color-y3: var(--y3);
@@ -62,5 +80,7 @@
     --foreground: #290f41;
   }
 }
+
+
 
 

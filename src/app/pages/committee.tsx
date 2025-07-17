@@ -10,77 +10,86 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Committee() {
   const router = useRouter();
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const cardsRef = useRef<HTMLDivElement[]>([]); // array of card refs
+
+  // Set each card ref
+  const setCardRef = (el: HTMLDivElement | null, index: number) => {
+    if (el) {
+      cardsRef.current[index] = el;
+    }
+  };
 
   useEffect(() => {
-    const text = 'COMMITTEE LIST';
-    const letters = text.split('');
-
+    // Animate heading
     if (headingRef.current) {
-      headingRef.current.innerHTML = letters
-        .map(
-          (char) =>
-            `<span class="inline-block opacity-0">${char === ' ' ? '&nbsp;' : char}</span>`
-        )
-        .join('');
-
-      const spans = headingRef.current.querySelectorAll('span');
-
       gsap.fromTo(
-        spans,
-        { opacity: 0 },
+        headingRef.current,
+        { opacity: 0, y: 60 },
         {
           opacity: 1,
-          stagger: 0.05,
-          ease: 'power2.out',
+          y: 0,
+          duration: 1,
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: headingRef.current,
             start: 'top 80%',
-            end: 'top 30%',
-            scrub: true,
-            toggleActions: 'play reverse play reverse',
+            toggleActions: 'restart reverse restart reverse',
           },
         }
       );
     }
+
+    // Animate each card individually
+    cardsRef.current.forEach((card, index) => {
+      if (card) {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            stagger: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 80%',
+              toggleActions: 'restart reverse restart reverse',
+            },
+          }
+        );
+      }
+    });
   }, []);
 
+  const committees = [
+    { href: '/unhrc', img: '/hrcb.png' },
+    { href: '/fifa', img: '/fifab.png' },
+    { href: '/ip', img: '/ipb.png' },
+    { href: '/fsc', img: '/fscb.png' },
+    { href: '/kla', img: '/klab.png' },
+  ];
+
   return (
-    <div id="committee" className="bg-radial from-foreground to-background pb-30">
+    <div id="committee" className="bg-radial font-seasons_r from-foreground to-background pb-30 min-h-screen">
       <h1
         ref={headingRef}
-        className="text-7xl text-gradient text-center mt-40 font-serif"
-      />
+        className="text-7xl text-gradient text-center mt-40 font-seasons_b"
+      >
+        COMMITTEE LIST
+      </h1>
+
       <div className="grid grid-cols-3 mx-40 mt-30 grid-rows-2 gap-24">
-        <div
-          onClick={() => router.push('/unhrc')}
-          className="rounded-2xl shadow-2xl shadow-black transform transition duration-200 cursor-pointer ease-in-out hover:scale-105"
-        >
-          <img src="/hrcb.png" className="rounded-3xl" />
-        </div>
-        <div
-          onClick={() => router.push('/fifa')}
-          className="rounded-2xl shadow-xl shadow-black transform transition duration-200 cursor-pointer ease-in-out hover:scale-105"
-        >
-          <img src="/fifab.png" className="rounded-3xl" />
-        </div>
-        <div
-          onClick={() => router.push('/ip')}
-          className="rounded-2xl shadow-xl shadow-black transform transition duration-200 cursor-pointer ease-in-out hover:scale-105"
-        >
-          <img src="/ipb.png" className="rounded-3xl" />
-        </div>
-        <div
-          onClick={() => router.push('/fsc')}
-          className="rounded-2xl shadow-xl shadow-black transform transition duration-200 cursor-pointer ease-in-out hover:scale-105"
-        >
-          <img src="/fscb.png" className="rounded-3xl" />
-        </div>
-        <div
-          onClick={() => router.push('/kla')}
-          className="rounded-2xl shadow-xl shadow-black transform transition duration-200 cursor-pointer ease-in-out hover:scale-105"
-        >
-          <img src="/klab.png" className="rounded-3xl" />
-        </div>
+        {committees.map((committee, idx) => (
+          <div
+            key={idx}
+            ref={(el) => setCardRef(el, idx)}
+            onClick={() => router.push(committee.href)}
+            className="rounded-2xl shadow-xl shadow-black transform transition duration-200 cursor-pointer ease-in-out hover:scale-105 opacity-0"
+          >
+            <img src={committee.img} className="rounded-3xl" />
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -19,11 +19,12 @@ export default function Landing() {
   return (
     <>
     {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
-    <div className="h-screen bg-radial from-foreground to-background">
+    <div className="min-h-screen font-seasons_r bg-radial from-foreground to-background">
       <Navbar></Navbar>
-      <h1 className="text-center pt-80 text-8xl font-serif font-semibold text-gradient">CET MUN 25</h1>
-      <p className="text-center mt-10 text-2xl text-white font-serif">August 1,2,3</p>
-      <button className="w-40 h-12 mt-10 text-xl block mx-auto bg-gradient drop-shadow-2xl drop-shadow-black border-2 border-black font-serif">
+      <img src="../../bg.png" width={900} className="absolute mt-10 left-0 right-0 mx-auto"></img>
+      <h1 className="text-center pt-80 text-8xl font-seasons_b font-semibold text-gradient">CET MUN 25</h1>
+      <p className="text-center mt-10 text-2xl text-white">August 1,2,3</p>
+      <button className="w-40 h-12 mt-10 text-xl block mx-auto bg-gradient drop-shadow-2xl drop-shadow-black border-2 border-black">
         REGISTER
       </button>
     </div>
