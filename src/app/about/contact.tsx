@@ -16,7 +16,7 @@ export default function Contact() {
           <h3 className="text-lg font-bold text-gradient mb-2">Quick Links</h3>
           <ul className="space-y-1">
             <li><a href="#about" className="hover:text-yellow-500">About</a></li>
-            <li><a href="#committees" className="hover:text-yellow-500">Committees</a></li>
+            <li><a href="#committee" className="hover:text-yellow-500">Committees</a></li>
             <li><a href="#contact" className="hover:text-yellow-500">Contact</a></li>
           </ul>
         </div>
