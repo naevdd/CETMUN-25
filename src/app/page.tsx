@@ -2,6 +2,7 @@ import Landing from "./about/landing";
 import Countdown from "./about/countdown"
 import Committees from "./about/committee";
 import About from "./about/about";
+import Contact from "./about/contact";
 
 export default function Page() {
   return (
@@ -10,6 +11,7 @@ export default function Page() {
     <About></About>
     <Countdown></Countdown>
     <Committees></Committees>
+    <Contact></Contact>
     </div>
   );
 }
