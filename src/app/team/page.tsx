@@ -41,11 +41,11 @@ export default function Team() {
         {Team.map((member, idx) => (
           <div
             key={idx}
-            className="rounded-2xl pb-10 px-10 pt-5 shadow-xl shadow-black transform transition duration-200 cursor-pointer ease-in-out hover:scale-105"
+            className="rounded-2xl pb-7 px-7 pt-5 shadow-xl shadow-black transform transition duration-200 cursor-pointer ease-in-out hover:scale-105"
           >
             <img src={member.img} className="mx-auto rounded-3xl" />
-            <p className="text-white text-xl text-center mt-10">{member.name}</p>
-            <p className="text-gradient text-xl text-center mt-10">{member.role}</p>
+            <p className="text-white text-xl text-center mt-7">{member.name}</p>
+            <p className="text-gradient text-xl text-center mt-5">{member.role}</p>
           </div>
         ))}
       </div>
