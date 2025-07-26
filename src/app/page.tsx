@@ -1,7 +1,7 @@
-import Landing from "./pages/landing";
-import Countdown from "./pages/countdown"
-import Committees from "./pages/committee";
-import About from "./pages/about";
+import Landing from "./about/landing";
+import Countdown from "./about/countdown"
+import Committees from "./about/committee";
+import About from "./about/about";
 
 export default function Page() {
   return (
