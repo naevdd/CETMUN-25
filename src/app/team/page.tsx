@@ -11,7 +11,7 @@ export default function Team() {
   { img: '/jan.jpg', name: 'Jan Joseph', role: 'USG Delegate Affairs' },
   { img: '/pridhu.jpg', name: 'Pridhu Raj R S', role: 'USG Design' },
   { img: '/yashnik 1.jpg', name: 'Yashnik', role: 'USG Logistics' },
-  { img: '/akhila.jpg', name: 'Akhila', role: 'USG Socials' },
+  { img: '/Akhila.jpg', name: 'Akhila', role: 'USG Socials' },
   { img: '/sruthy.jpg', name: 'Sruthy', role: 'USG Socials' },
   { img: '/akshay.jpg', name: 'Akshay', role: 'USG Dining and Cuisine' },
   { img: '/roopesh.jpg', name: 'Roopesh', role: 'USG Dining and Cuisine' },
