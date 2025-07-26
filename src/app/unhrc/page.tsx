@@ -19,7 +19,7 @@ export default function Un() {
           scrollTrigger: {
             trigger: headingRef.current,
             start: 'top 80%',
-            toggleActions: 'restart reverse restart reverse',
+            toggleActions: 'play',
           },
         }
       );
@@ -29,7 +29,7 @@ export default function Un() {
   return (
     <div id="countdown" className="min-h-screen font-seasons_b bg-radial from-foreground to-background">
       <div ref={headingRef}>
-      <h1 className="sm:text-7xl text-6xl text-gradient text-center pt-35">
+      <h1 className="sm:text-7xl text-5xl px-5 text-gradient text-center pt-35">
         United Nations <br></br> Human Rights Council
       </h1>
       <img className="mx-auto sm:w-[250px] w-[200px] mt-14" src="../HRC.png"></img>
@@ -41,9 +41,11 @@ export default function Un() {
           <div className="text-center font-seasons_r text-white">
             Where Themis drops the blindfold and justice demands voice
 Apollo sang of truth, and Themis held the scales — this is their court.
-Step into the shoes of global human rights watchdogs. Whether it is refugee crises, state surveillance, or minority rights, the UNHRC demands empathy, advocacy, and action. Words here are not just debate—they're a stand for humanity.
+Step into the shoes of global human rights watchdogs. Whether it is refugee crises, state surveillance, or minority rights, the UNHRC demands empathy, advocacy, and action. Words here are not just debate—they are a stand for humanity.
           </div>
         </div>
+        <a href="/UNHRCBG.pdf" target="_blank"><button className="w-60 h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
+        BACKGROUND GUIDE</button></a>
       </div>
       <h1 className="sm:text-5xl text-4xl text-gradient text-center pt-14">
         EXECUTIVE BOARD

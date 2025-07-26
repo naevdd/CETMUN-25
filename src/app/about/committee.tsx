@@ -54,7 +54,7 @@ export default function Committee() {
             scrollTrigger: {
               trigger: card,
               start: 'top 80%',
-              toggleActions: 'restart',
+              toggleActions: 'play',
             },
           }
         );
