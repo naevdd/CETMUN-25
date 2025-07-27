@@ -1,7 +1,7 @@
 import Landing from "./about/landing";
 import Countdown from "./about/countdown"
 import Committees from "./about/committee";
-import About from "./about/about";
+import About from "./about/page";
 import Contact from "./about/contact";
 
 export default function Page() {

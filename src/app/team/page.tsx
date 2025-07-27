@@ -10,22 +10,23 @@ export default function Team() {
   { img: '/devika.jpg', name: 'Devika Vipin', role: 'USG Delegate Affairs' },
   { img: '/jan.jpg', name: 'Jan Joseph', role: 'USG Delegate Affairs' },
   { img: '/pridhu.jpg', name: 'Pridhu Raj R S', role: 'USG Design' },
-  { img: '/yashnik 1.jpg', name: 'Yashnik', role: 'USG Logistics' },
-  { img: '/Akhila.jpg', name: 'Akhila', role: 'USG Socials' },
-  { img: '/sruthy.jpg', name: 'Sruthy', role: 'USG Socials' },
-  { img: '/akshay.jpg', name: 'Akshay', role: 'USG Dining and Cuisine' },
-  { img: '/roopesh.jpg', name: 'Roopesh', role: 'USG Dining and Cuisine' },
+  { img: '/yashnik 1.jpg', name: 'Yashnik M', role: 'USG Logistics' },
+  { img: '/akhila.jpg', name: 'Akhila', role: 'USG Socials' },
+  { img: '/sruthy.jpg', name: 'Shruthy R', role: 'USG Socials' },
+  { img: '/akshay.jpg', name: 'Akshay R', role: 'USG Dining and Cuisine' },
+  { img: '/roopesh.jpg', name: 'Roopesh S A', role: 'USG Dining and Cuisine' },
   { img: '/allan.jpg', name: 'Allan Mathew', role: 'USG Finance' },
   { img: '/gauri1.jpg', name: 'Gauri G', role: 'USG Young Talent and Equity' },
   { img: '/gauri2 1.jpg', name: 'Gauri J', role: 'USG Young Talent and Equity' },
-  { img: '/devanandana.jpg', name: 'Devanandana', role: 'USG Content' },
-  { img: '/bharath.jpg', name: 'Bharath', role: 'USG Media' },
-  { img: '/goutham.jpg', name: 'Goutham', role: 'USG Media' },
-  { img: '/dhruv 1.jpg', name: 'Dhruv', role: 'USG Sponsorship' },
-  { img: '/yamin.jpg', name: 'Yamin', role: 'USG Sponsorship' },
-  { img: '/sonali.jpg', name: 'Sonali', role: 'USG Hospitality' },
-  { img: '/dheeraj.jpg', name: 'Dheeraj', role: 'USG Hospitality' }
+  { img: '/devanandana.jpg', name: 'Devanandana P R', role: 'USG Content' },
+  { img: '/bharath.jpg', name: 'Bharath R', role: 'USG Media' },
+  { img: '/goutham.jpg', name: 'Goutham R Nair', role: 'USG Media' },
+  { img: '/dhruv 1.jpg', name: 'Dhruv Ram Menon', role: 'USG Sponsorship' },
+  { img: '/yamin.jpg', name: 'Muhammed Yamin Beck', role: 'USG Sponsorship' },
+  { img: '/sonali.jpg', name: 'Sonali Krishna', role: 'USG Hospitality' },
+  { img: '/dheeraj.jpg', name: 'Dheeraj M S', role: 'USG Hospitality' }
 ];
+
 
 
 
