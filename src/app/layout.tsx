@@ -24,6 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content="CET MUN" />
+        <meta property="og:description" content="CET Model United Nations Conference" />
+        <meta property="og:image" content="https://cetmun-25.vercel.app/LOGO2025.jpg" />
+        <meta property="og:url" content="https://cetmun-25.vercel.app/" />
+        <meta property="og:type" content="website" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
