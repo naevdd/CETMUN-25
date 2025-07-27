@@ -44,9 +44,9 @@ When the past has fallen and Olympus is no more, a new council rises to tame the
 In FSC, delegates are like Prometheus — stealing foresight from the future to solve crises before they consume the world. Set in a world yet to come, the FSC tackles tomorrow<span className="font-serif">'</span>s conflicts today. From AI—driven warfare to interplanetary disputes, this council demands sharp foresight, bold strategy, and out of thebox diplomacy. The future is uncertain—your leadership will define it.
           </div>
         </div>
-        <a href="/FSCBG1.pdf" target="_blank"><button className="w-60 h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
+        <a href="/FSCBG1.pdf" target="_blank"><button className="w-60 cursor-pointer h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
         BACKGROUND GUIDE 1</button></a>
-        <a href="/FSCBG2.pdf" target="_blank"><button className="w-60 h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
+        <a href="/FSCBG2.pdf" target="_blank"><button className="w-60 cursor-pointer h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
         BACKGROUND GUIDE 2</button></a>
       </div>
       <h1 className="sm:text-5xl text-4xl text-gradient text-center pt-14">

@@ -44,7 +44,7 @@ Unlike Olympus, power here is earned, not inherited.
 KLA simulates the thunderous drama of Kerala<span className="font-serif">'</span>s political scene, where leaders clash like rival demigods. From student protests to budget battles — this is where the fate of the realm <span className="font-serif">(</span>and syllabus<span className="font-serif">)</span> is debated.
           </div>
         </div>
-        <a href="/KLABG.pdf" target="_blank"><button className="w-60 h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
+        <a href="/KLABG.pdf" target="_blank"><button className="w-60 cursor-pointer h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
         BACKGROUND GUIDE</button></a>
       </div>
       <h1 className="sm:text-5xl text-4xl text-gradient text-center pt-14">

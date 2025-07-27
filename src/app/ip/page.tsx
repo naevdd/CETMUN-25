@@ -43,7 +43,7 @@ export default function Ip() {
 Whether you report like Hermes, snap moments like Apollo, or sketch chaos like Hephaestus with a pen, IP crafts the mythology of the MUN in real—time. Truth, bias, drama — all in your hands. 
           </div>
         </div>
-        <a href="/IPBG.pdf" target="_blank"><button className="w-60 h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
+        <a href="/IPBG.pdf" target="_blank"><button className="w-60 cursor-pointer h-12 mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
         BACKGROUND GUIDE</button></a>
       </div>
       <h1 className="sm:text-5xl text-4xl text-gradient text-center pt-14">
