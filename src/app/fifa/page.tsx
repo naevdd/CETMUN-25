@@ -44,7 +44,7 @@ Zeus may rule the skies, but on Earth, football is the true religion.
 FIFA is where politics and power collide under the banner of sport—navigating controversies, corruption, global events, and the intersection of sport with social justice. In FIFA, the pitch is political, and every decision has worldwide impact.
           </div>
         </div>
-        <a href="/UNHRCBG.pdf" target="_blank"><button className="w-60 h-12 cursor-pointer mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
+        <a href="/FIFABG.pdf" target="_blank"><button className="w-60 h-12 cursor-pointer mt-10 text-xl block mx-auto bg-gradient text-foreground drop-shadow-2xl drop-shadow-black border-2 border-black">
         BACKGROUND GUIDE</button></a>
       </div>
       <h1 className="sm:text-5xl text-4xl text-gradient text-center pt-14">
