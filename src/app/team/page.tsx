@@ -2,7 +2,7 @@ export default function Team() {
   const Team = [
   { img: '/amina.jpg', name: 'Amina Jubair', role: 'Convenor' },
   { img: '/abhi.jpg', name: 'Abhimanyu Pradeep', role: 'Secretary General' },
-  { img: '/avantika.jpg', name: 'Avantika Veenus', role: 'Deputy Secretary General' },
+  { img: '/avantika.jpg', name: 'Avantika Adiyodi', role: 'Deputy Secretary General' },
   { img: '/ephrem.jpg', name: 'Ephrem Mathews', role: 'Director General' },
   { img: '/denis.jpg', name: 'Denis George Joseph', role: "Chargé d affaires" },
   { img: '/naveed 1.jpg', name: 'Naveed Niaz', role: 'USG Marketing and Web' },
